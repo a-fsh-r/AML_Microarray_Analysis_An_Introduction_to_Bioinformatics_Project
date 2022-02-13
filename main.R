@@ -29,7 +29,7 @@ CreateLabel <- function(x) {
   }
 }
 
-gr <- sapply(1:length(gset$`phenotype:ch1`) , CreatLabel)
+gr <- sapply(1:length(gset$`phenotype:ch1`) , CreateLabel)
 
 ex <-exprs(gset)
 
