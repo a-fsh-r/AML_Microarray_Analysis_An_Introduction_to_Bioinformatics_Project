@@ -21,7 +21,7 @@ gset <- gset[[idx]]
 
 gset<- gset[,which(gset$`phenotype:ch1` == "Normal" | gset$source_name_ch1 == "AML Patient")]
 
-CreatLabel <- function(x) {
+CreateLabel <- function(x) {
   if (gset$source_name_ch1[x] == "AML Patient") {
     return("Test")
   } else {
