@@ -42,7 +42,9 @@ max_ex <- max(ex)
 pdf("Results/boxplot.pdf", width = 20)
 boxplot(ex)
 dev.off()
-#normal hastan
+
+
+#normalize
 #ex<- normalizeQuantiles(ex)
 #ex(gset) <- ex
 
@@ -84,22 +86,27 @@ dev.off()
 
 gr <- c(rep("Test", 13), rep("other", 86), "CD34", rep("other", 3), "CD34", rep("other", 3), "CD34", rep("other", 36), rep("Test", 2), "other", rep("Test", 3), rep("other", 20))
 gr <- factor(gr)
+
 gset$description <- gr
 design <- model.matrix(~ description + 0, gset)
 colnames(design) <- levels(gr)
 fit <- lmFit(gset, design)
+
 cont.matrix <- makeContrasts(Test - CD34 , levels = design)
 fit2 <- contrasts.fit(fit, cont.matrix)
 fit2 <- eBayes(fit2, 0.01)
+
 tT <- topTable(fit2, adjust="fdr", sort.by="B", number=Inf)
 tT <- subset(tT, select=c("ID","adj.P.Val","P.Value","t","B","logFC","Gene.symbol","Gene.title"))
 tT <- subset(tT , select = c("Gene.symbol" , "Gene.title", "adj.P.Val"  , "logFC"))
+
+###aml up genes
 
 aml.up <- subset(tT, logFC > 1 & adj.P.Val < 0.05)
 aml.up.genes <-unique( as.character(strsplit2( (aml.up$Gene.symbol),"///")))
 write.table(aml.up.genes, file = "Results/Test_CD34_Up.txt", row.names = F, col.names = F)
 
-
+###aml down genes
 aml.down <- subset(tT, logFC < -1 & adj.P.Val < 0.05)
 aml.down.genes <-unique( as.character(strsplit2( (aml.down$Gene.symbol),"///")))
 write.table(aml.down.genes, file = "Results/Test_CD34_down.txt", row.names = F, col.names = F )
