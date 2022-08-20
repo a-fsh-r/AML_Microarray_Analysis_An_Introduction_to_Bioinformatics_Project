@@ -1,6 +1,6 @@
 # AML Microarray Analysis - Bioinformatics
 
-"Introduction to Bioinformatics" Course Project - Department of Computer Engineering, Sharif University of Technology (SUT).
+"Introduction to Bioinformatics" Final Project - Department of Computer Engineering, Sharif University of Technology (SUT) - just code (without report pdf.)
 
 Course Instructors:  Dr. Somayyeh Koohi and Dr. Ali Sharifi Zarchi
 
