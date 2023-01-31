@@ -1,4 +1,4 @@
-# an Intro to Bioinformatics Project - Fall 2021 - AML Microarray Analysis
+# An Intro to Bioinformatics Project - Fall 2021 - AML Microarray Analysis
 
 "Introduction to Bioinformatics" Final Project - Department of Computer Engineering, Sharif University of Technology (SUT).
 
