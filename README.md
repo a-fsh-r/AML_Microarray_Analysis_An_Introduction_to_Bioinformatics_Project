@@ -12,11 +12,22 @@ Instructors: **Prof. Somayyeh Koohi** & **Prof. Ali Sharifi-Zarchi**
 
 This project focused on the **microarray analysis of Acute Myeloid Leukemia (AML)** – the most common type of acute leukemia in adults. AML originates in the bone marrow and leads to the overproduction of abnormal white blood cells.
 
-Alternative names for AML include:  
-- Acute myelocytic leukemia  
-- Acute myelogenous leukemia  
-- Acute granulocytic leukemia  
-- Acute non-lymphocytic leukemia
+---
+
+
+## ⚙️ What We Did
+
+1. **Data Loading**  
+   Downloaded dataset from GEO (platform GPL6244) and filtered for AML and control samples.
+
+2. **Data Exploration**  
+   Generated boxplots, correlation heatmaps, and performed PCA for quality check and visualization.
+
+3. **Differential Expression Analysis**  
+   Used `limma` to find genes significantly up- or down-regulated in AML vs. CD34+ samples.
+
+4. **Results**  
+   Extracted gene lists with significant fold changes and adjusted p-values, saved in text files for further analysis.
 
 ---
 
@@ -25,7 +36,6 @@ Alternative names for AML include:
 🔗 [GEO Accession: GSE48558](https://www.ncbi.nlm.nih.gov/geo/geo2r/?acc=GSE48558)
 
 ---
-
 ## 📄 Report
 
 📌 The full project report is available in **Persian**.
