@@ -10,6 +10,8 @@ Instructors: **Prof. Somayyeh Koohi** & **Prof. Ali Sharifi-Zarchi**
 
 ## 🧠 Project Overview
 
+Analysis of microarray data (GSE48558) to identify differentially expressed genes in Acute Myeloid Leukemia (AML) patients compared to CD34+ control samples.
+
 This project focused on the **microarray analysis of Acute Myeloid Leukemia (AML)** – the most common type of acute leukemia in adults. AML originates in the bone marrow and leads to the overproduction of abnormal white blood cells.
 
 ---
